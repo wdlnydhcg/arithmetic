@@ -1,0 +1,23 @@
+{
+  "name": "arithmetic",
+  "version": "1.0.0",
+  "description": "算法笔记",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdlnydhcg/arithmetic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wdlnydhcg/arithmetic/issues"
+  },
+  "homepage": "https://github.com/wdlnydhcg/arithmetic#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.23"
+  }
+}
