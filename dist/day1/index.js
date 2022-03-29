@@ -3,7 +3,7 @@
  * @Author: MrAlenZhong
  * @Date: 2022-03-28 19:32:58
  * @LastEditors: MrAlenZhong
- * @LastEditTime: 2022-03-28 21:41:28
+ * @LastEditTime: 2022-03-28 21:49:31
  * @Description:
  *
 整数的 数组形式  num 是按照从左到右的顺序表示其数字的数组。
@@ -38,12 +38,9 @@ function addToArrayForm(num, k) {
 }
 ;
 function add(a, b) {
-    //取两个数字的最大长度
     let maxLength = Math.max(a.length, b.length);
-    //用0去补齐长度
-    a = a.padStart(maxLength, "0"); //"0009007199254740991"
-    b = b.padStart(maxLength, "0"); //"1234567899999999999"
-    //定义加法过程中需要用到的变量
+    a = a.padStart(maxLength, "0");
+    b = b.padStart(maxLength, "0");
     let t = 0;
     let f = 0; //"进位"
     let sum = "";
@@ -55,7 +52,7 @@ function add(a, b) {
     if (f == 1) {
         sum = "1" + sum;
     }
-    return sum.split("").map((item) => item * 1);
+    return sum.split("").map((item) => item);
 }
 // console.log(addToArrayForm([1, 2, 0, 0], 34));
 // console.log(addToArrayForm([2, 7, 4], 181));
