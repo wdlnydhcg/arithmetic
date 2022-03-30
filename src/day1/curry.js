@@ -1,4 +1,5 @@
 //方法一
+console.log("方法一");
 function curry (func) {
   return function curried (...args) {
     if (args.length >= func.length) {
@@ -40,6 +41,7 @@ function add(){
 let a = add(1,2,3);
 let b = add(1)(2)(3)
 let c = add(1, 2, 3)
+console.log("方法二");
 console.log(a);
 console.log(b);
 console.log(c);
@@ -89,23 +91,3 @@ const whichEvent = (function(){
     }
   }
 })()
-/**
- * step-3
- * //方法三
- */
-function addEgg(){
-  let args = Array.prototype.slice.call(arguments)
-  let inner = function(){
-    args.push(...arguments);
-    return inner;
-  }
-
-  inner.toString = function(){
-    return args.reduce(function(prev,cur){
-      return prev + cur;
-    });
-  }
-  return inner
-}
-const result = addEgg(1)(2)(3)(4,5)
-console.log(result);
